@@ -1,0 +1,65 @@
+#banner-container{
+    /* background-color: rgb(249, 240, 229); */
+    /* height: 100px; */
+    margin-top: 5%;
+    padding: 6% 8%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+#banner-left-cont{
+    width: 50%;
+    /* background-color: yellowgreen; */
+    text-align: left;
+    /* min-width: 350px; */
+}
+#banner-left-cont h1{
+    /* background-color: yellowgreen; */
+    text-align: left;
+    font-size: 35px;
+    font-weight: 500;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+#banner-caption{
+    /* background-color: yellowgreen; */
+    text-align: left;
+    font-size: 23px;
+    font-weight: 300;
+}
+#btn-collection{
+    margin-top: 3%;
+    border: 1px solid black;
+    padding: 2%;
+    font-weight: 500;
+    border-radius: 8px;
+}
+#btn-collection:hover{
+    background-color: tomato;
+    animation-name: color-change;
+    animation-duration: 4s;
+    color: white;
+}
+@keyframes color-change{
+    0% { background-color: coral; }
+    50% { background-color: crimson; }
+    100% { background-color: tomato; }
+}
+#banner-right-cont{
+    width: 50%;
+    /* background-color: yellowgreen; */
+}
+#banner-pic{
+    width: 100%;
+    min-width: 250px;
+}
+
+@media(max-width:850px){
+    #banner-container{
+        /* flex-wrap: wrap; */
+        justify-content: center;
+    }
+    #banner-left-cont{
+        width: 100%;
+    }
+}

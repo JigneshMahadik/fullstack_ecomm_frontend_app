@@ -1,0 +1,48 @@
+#sale-container{
+    background-color: rgb(185, 234, 234);
+    padding: 2% 4% 0% 4%;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+}
+#left-sale-cont{
+    width: 50%;
+    /* background-color: yellowgreen; */
+    text-align: left;
+    padding-left: 70px;
+}
+#left-sale-cont button{
+    background-color: black;
+    padding: 3px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 10px;
+}
+#left-sale-cont h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+#right-sale-cont{
+    /* background-color: violet; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+#sale-img{
+    width: 240px;
+    /* background-color: yellowgreen; */
+}
+/* Responsive for all devices */
+@media(max-width : 850px){
+    #left-sale-cont{
+        width: 100%;
+        margin-left: 0px;
+        padding: 0px 15px;
+    }   
+    #right-sale-cont{
+        width: 100%;
+    }
+}
