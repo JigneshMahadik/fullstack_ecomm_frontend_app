@@ -13,7 +13,8 @@ export function AddProductPage(){
             const proType = document.getElementById("type").value;
             const proRatings = document.getElementById("ratings").value;
             const proDetails = document.getElementById("details").value;
-            const proImage = document.getElementById("image").value;
+            // const proImage = document.getElementById("image").value;
+            const proImage = document.getElementById("image").files[0];
             const category = document.getElementById("category").value;
             const sub_category = document.getElementById("sub-category").value;
 
