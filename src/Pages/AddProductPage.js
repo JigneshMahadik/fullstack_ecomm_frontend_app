@@ -4,7 +4,8 @@ import axios from "axios";
 
 export function AddProductPage(){
 
-    async function addProducts(){
+    async function addProducts(event){
+        event.preventDefault();
         try{
             const formData = new FormData();
             const proName = document.getElementById("proName").value;
@@ -13,7 +14,6 @@ export function AddProductPage(){
             const proType = document.getElementById("type").value;
             const proRatings = document.getElementById("ratings").value;
             const proDetails = document.getElementById("details").value;
-            // const proImage = document.getElementById("image").value;
             const proImage = document.getElementById("image").files[0];
             const category = document.getElementById("category").value;
             const sub_category = document.getElementById("sub-category").value;
@@ -29,7 +29,7 @@ export function AddProductPage(){
             formData.append('product_category', category);
             formData.append('product_sub_category', sub_category);
 
-            const resp = await axios.post("https://fullstack-ecomm-backend-app.onrender.com/addProducts",formData,{
+            const resp = await axios.post("http://localhost:8082/addProducts",formData,{
                 headers: {
                     "Content-Type": "multipart/form-data",
                 }
@@ -37,6 +37,7 @@ export function AddProductPage(){
             console.log("Product added successfully.");
         }
         catch(error){
+            console.log("Error while adding the product !",error);
             console.log(error);
         }
     }
