@@ -1,5 +1,7 @@
 #subscribe{
     padding: 4%;
+    /* background-color: rgb(216, 219, 210); */
+    background-color: rgb(185, 234, 234);
 }
 #subscribe h1{
     font-size: 25px;

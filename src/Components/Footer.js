@@ -18,10 +18,10 @@ export function Footer(){
                 <div id="footer-cont-2">
                     <h1 id="footer-title">Follow us</h1>
                     <div id="footer-detail-follow-us">
-                        <img src={linkedin} className="follow-us-icon"/>
-                        <img src={insta} className="follow-us-icon"/>
-                        <img src={twitter} className="follow-us-icon"/>
-                        <img src={fb} className="follow-us-icon"/>
+                        <img src={linkedin} className="follow-us-icon" alt="LinkedIn" />
+                        <img src={insta} className="follow-us-icon" alt="Instagram" />
+                        <img src={twitter} className="follow-us-icon" alt="Twitter" />
+                        <img src={fb} className="follow-us-icon" alt="Facebook" />
                     </div>
                 </div>
                 <div id="footer-cont-3">

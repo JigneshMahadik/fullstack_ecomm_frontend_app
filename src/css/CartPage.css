@@ -1,0 +1,9 @@
+#btn-quantity{
+    color: white;
+    display: flex;
+    gap: 20px;
+}
+#btn-quantity img{
+    height: 20px;
+    cursor: pointer;
+}

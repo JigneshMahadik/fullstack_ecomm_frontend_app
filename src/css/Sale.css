@@ -1,10 +1,10 @@
 #sale-container{
     background-color: rgb(185, 234, 234);
     padding: 2% 4% 0% 4%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
 }
 #left-sale-cont{
     width: 50%;

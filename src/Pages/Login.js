@@ -13,12 +13,17 @@ export function Login(){
         event.preventDefault();
 
         try{
+            const username = document.getElementById("username").value;
+            const pwd = document.getElementById("password").value;
             const res = await axios.post("https://fullstack-ecomm-backend-app.onrender.com/Login",
             {
-                email : "jignesh@gmail.com",
-                password : "jig123"
+                email : username,
+                password : pwd
+            },{
+                withCredentials: true // Ensure cookies are sent
             });
             sessionStorage.setItem("token",res.data.token);
+            
             window.location = "/";
         }
         catch(e){
@@ -31,10 +36,10 @@ export function Login(){
             <div className="login-container">
                 <h2>Login</h2>
                 {/* <form action="/Login" method="POST"> */}
-                <form onSubmit={custLogin} method="POST">
-                    <input type="text" name="username" placeholder="Email or phone number" required/>
-                    <input type="password" name="password" placeholder="Password" required/>
-                    <button type="submit">Login</button>
+                <form method="POST">
+                    <input type="text" name="username" id="username" placeholder="Email or phone number" required/>
+                    <input type="password" name="password" id="password" placeholder="Password" required/>
+                    <button type="submit" onClick={custLogin}>Login</button>
                     <br></br><br></br>
                     <p id="dont-have-acc">Don't have an account ?</p>
                     <NavLink to="/Signup"><p id="btn-signup">Sign Up</p></NavLink>

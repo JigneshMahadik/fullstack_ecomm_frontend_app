@@ -43,7 +43,10 @@
     font-size: 20px;
     font-weight: 500;
 }
-#ratings{
+#pro-det-ratings-cont{
+    display: flex;
+}
+#pro-det-ratings{
     font-size: 15px;
 }
 #price-cont{
@@ -79,6 +82,7 @@
     padding-right: 10px; */
     margin-right: 5px;
     cursor: pointer;
+    border-radius: 50%;
 }
 #sizes div:hover{
     background-color: rgb(69, 114, 199);
@@ -101,17 +105,18 @@
     margin-top: 15%;
 }
 #btn-add-1{
-    width: 50%;
+    width: 100%;
     padding: 10px;
     color: white;
     margin-right: 10px;
     background-color: rgb(11, 12, 8);
 }
 #btn-add-2{
-    width: 50%;
+    width: 100%;
     padding: 10px;
     color: white;
     background-color: rgb(11, 12, 8);
+    height: 100%;
 }
 
 #pro-des{
@@ -124,7 +129,47 @@
     font-size: x-large;
     font-weight: 500;
 }
+#material{
+    font-size: 10px;
+    color: grey;
+}
 
+#btns-remove{
+    display: flex;
+    /* background-color: rgb(122, 130, 98); */
+    margin-top: 15%;
+}
+#btn-remove-1{
+    width: 100%;
+    padding: 10px;
+    /* color: white; */
+    margin-right: 10px;
+    /* background-color: rgb(11, 12, 8); */
+    border: 1px solid black;
+    color: black;
+    font-weight: 500;
+}
+#btn-remove-2{
+    width: 50%;
+    padding: 10px;
+    color: white;
+    background-color: rgb(11, 12, 8);
+}
+#pro-det-btn-cont{
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+#btn-1{
+    width: 50%;
+    /* background-color: aqua; */
+    height: 100%;
+}
+#btn-2{
+    width: 50%;
+    /* background-color: rgb(131, 91, 147); */
+}
 
 @media(max-width:850px){
     #pro-det-main-container{

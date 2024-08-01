@@ -1,0 +1,8 @@
+#wish-btn{
+    /* background-color: cornsilk; */
+    border: 2px solid white;
+    padding: 4px 10px;
+}
+#wish-btn:hover{
+    background-color: rgb(45, 92, 211);
+}

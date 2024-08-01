@@ -1,6 +1,6 @@
 #top-brands-cont{
-    margin-top: 8%;
-    /* background-color: rgb(139, 139, 133); */
+    /* margin-top: 8%; */
+    /* background-color: rgb(237, 237, 229); */
     padding: 0 3% 0 3%;
 }
 #top-brands-header{
@@ -14,6 +14,8 @@
 #categories{
     border: 1px solid rgb(193, 183, 183);
     border-radius: 5px;
+    padding: 8px;
+    font-size: 15px;
 }
 #top-brands-header p{
     font-weight: 500;
@@ -27,33 +29,40 @@
     /* padding-bottom: 10px; */
     flex-wrap: wrap;
 }
-#product-card{
+#home-product-card{
     /* background-color: aquamarine; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 220px;
     /* height: 300px; */
     margin-bottom: 4%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
 }
 #part-1{
     /* background-color: blue; */
     height: 70%;
     width: 100%;
 }
+#part-1 img{
+    object-fit: cover;
+}
 #pro-img{
     height: 100%;
     width: 100%;
     /* height: 80%; */
     background-size: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
 }
 #part-2{
     height: 30%;
-    line-height: 30px;
+    line-height: 20px;
     /* margin-top: 13px; */
     /* background-color: yellowgreen; */
+}
+.pro-title{
+    color: black;
+    font-weight: 500;
 }
 #price-offer{
     display: flex;
@@ -62,6 +71,11 @@
     /* margin-bottom: 20px; */
     /* background-color: yellowgreen; */
 }
+.price{
+    color: rgb(79 70 229);
+    font-weight: 700;
+    font-size: 18px;
+}
 #addToCartBtn{
     background-color: rgb(37, 82, 180);
     color: white;
@@ -69,4 +83,94 @@
     padding: 6px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+#part-1 {
+    position: relative;
+    overflow: hidden;
+}
+
+#pro-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.heart-icon:hover {
+    /* background-color: #ff6b6b; */
+    background-color: rgb(37 99 235);
+}
+
+.heart-icon svg {
+    width: 16px;
+    height: 16px;
+    color: #908989;
+}
+
+.heart-icon:hover svg {
+    color: white;
+}
+#pro-img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
+.filled-heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(37 99 235);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+.filled-heart-icon svg {
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+#btn-pagination{
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+#left-arr, #right-arr{
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+#left-arr:active, #right-arr:active{
+    transform: scale(1.2);
+}
+#ratings-cont{
+    display: flex;
+}
+#ratings{
+    /* background-color: yellowgreen; */
+    text-align: left;
+    margin-left: 10px;
+    line-height: 0px;
+    color: rgb(79 70 229);
+    font-weight: 700;
 }
