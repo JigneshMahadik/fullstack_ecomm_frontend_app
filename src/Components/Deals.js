@@ -120,6 +120,10 @@ export function Deals(){
         }
     }
 
+    function formatImageUrl(url){
+        return url.replace('/opt/render/project/src', '');
+    }
+
     return(
         <div>
             <div id="top-brands-cont">
@@ -143,12 +147,13 @@ export function Deals(){
                                     const rel_path = item.product_image.split("/");
                                     const len = item.product_image.split("/").length;
                                     console.log("path is",rel_path[len-1]);
+                                    console.log("Trial an error",item.product_image);
                                     
                                     return(
                                         <div id="home-product-card" key={id}>
                                             <div id="part-1">
                                                 {/* {console.log("val is :",item.product_image)} */}
-                                            <NavLink to={`/ProductDetails/${item._id}`}><img src={`https://fullstack-ecomm-backend-app.onrender.com/filesUploaded/${rel_path[len-1]}`} id="pro-img" alt="Image" /></NavLink>
+                                            <NavLink to={`/ProductDetails/${item._id}`}><img src={`https://fullstack-ecomm-backend-app.onrender.com${formatImageUrl(item.product_image)}`} id="pro-img" alt="Image" /></NavLink>
                                             {
                                                 isInWishlist?(
                                                     <div className="filled-heart-icon" onClick={()=>removeFromWishlist(item._id)}>
