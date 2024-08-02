@@ -142,7 +142,7 @@ export function Deals(){
                                     const isInCart = cartedProducts.includes(item._id);
                                     const rel_path = item.product_image.split("\\");
                                     const len = item.product_image.split("/").length;
-                                    // console.log("path is",rel_path[len-1]);
+                                    console.log("path is",rel_path[len-1]);
                                     return(
                                         <div id="home-product-card" key={id}>
                                             <div id="part-1">
