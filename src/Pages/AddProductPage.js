@@ -29,7 +29,7 @@ export function AddProductPage(){
             formData.append('product_category', category);
             formData.append('product_sub_category', sub_category);
 
-            const resp = await axios.post("http://localhost:8082/addProducts",formData,{
+            const resp = await axios.post("https://fullstack-ecomm-backend-app.onrender.com/addProducts",formData,{
                 headers: {
                     "Content-Type": "multipart/form-data",
                 }
