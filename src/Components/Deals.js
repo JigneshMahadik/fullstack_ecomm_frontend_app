@@ -146,7 +146,7 @@ export function Deals(){
                                     return(
                                         <div id="home-product-card" key={id}>
                                             <div id="part-1">
-                                                {console.log("val is :",item.product_image)}
+                                                {/* {console.log("val is :",item.product_image)} */}
                                             <NavLink to={`/ProductDetails/${item._id}`}><img src={`https://fullstack-ecomm-backend-app.onrender.com/filesUploaded/${rel_path[len-1]}`} id="pro-img" alt="Image" /></NavLink>
                                             {
                                                 isInWishlist?(
