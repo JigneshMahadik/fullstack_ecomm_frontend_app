@@ -126,13 +126,14 @@ export function TopBrands() {
                     {
                     products.length > 0 ? (
                         products.map((item, id) => {
-                            var imgPath = item.product_image.replace("C:\\fakepath\\", "");
+                            // var imgPath = item.product_image.replace("C:\\fakepath\\", "");
                             const isInCart = cartedProducts.includes(item._id);
                             const isInWishlist = wishlist.includes(item._id);
                             return (
                                 <div id="home-product-card" key={id}>
                                     <div id="part-1">
-                                        <NavLink to={`/ProductDetails/${item._id}`}><img src={require(`../assets/images/temp/${imgPath}`)} id="pro-img" alt="Image" /></NavLink>
+                                        {/* <NavLink to={`/ProductDetails/${item._id}`}><img src={require(`../assets/images/temp/${imgPath}`)} id="pro-img" alt="Image" /></NavLink> */}
+                                        <NavLink to={`/ProductDetails/${item._id}`}><img src={item.product_image} id="pro-img" alt="Image" /></NavLink>
                                         {
                                             isInWishlist?(
                                                 <div className="filled-heart-icon" onClick={()=>removeFromWishlist(item._id)}>
