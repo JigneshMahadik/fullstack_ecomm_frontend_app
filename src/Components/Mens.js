@@ -136,10 +136,14 @@ export function Mens(){
                                 mensCollection.map((item,id)=>{
                                     const isInWishlist = wishlist.includes(item._id);
                                     const isInCart = cartedProducts.includes(item._id);
+                                    // const rel_path = item.product_image.split("/");
+                                    // const len = item.product_image.split("/").length;
+                                    
                                     return(
                                         <div id="home-product-card" key={id}>
                                             <div id="part-1">
-                                            <NavLink to={`/ProductDetails/${item._id}`}><img src={img1} id="pro-img" alt="Image" /></NavLink>
+                                            {/* <NavLink to={`/ProductDetails/${item._id}`}><img src={`https://fullstack-ecomm-backend-app.onrender.com/filesUploaded/${rel_path[len-1]}`} id="pro-img" alt="Image" /></NavLink> */}
+                                            <NavLink to={`/ProductDetails/${item._id}`}><img src={item.product_image} id="pro-img" alt="Image" /></NavLink>
                                             {
                                                 isInWishlist?(
                                                     <div className="filled-heart-icon" onClick={()=>removeFromWishlist(item._id)}>
