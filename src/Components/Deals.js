@@ -1,9 +1,4 @@
 import "../css/Deals.css"
-import img1 from "../assets/images/Clothes/1.jpeg"
-import img2 from "../assets/images/Shoes/55.jpeg"
-import img3 from "../assets/images/Clothes/3.jpeg"
-import img4 from "../assets/images/Electronics/26.jpeg"
-import img5 from "../assets/images/Clothes/10.jpeg"
 import { useEffect, useState } from "react"
 import axios from "axios";
 import { NavLink } from "react-router-dom"
@@ -120,9 +115,9 @@ export function Deals(){
         }
     }
 
-    function formatImageUrl(url){
-        return url.replace('/opt/render/project/src', '');
-    }
+    // function formatImageUrl(url){
+    //     return url.replace('/opt/render/project/src', '');
+    // }
 
     return(
         <div>
@@ -153,7 +148,8 @@ export function Deals(){
                                         <div id="home-product-card" key={id}>
                                             <div id="part-1">
                                                 {/* {console.log("val is :",item.product_image)} */}
-                                            <NavLink to={`/ProductDetails/${item._id}`}><img src={`https://fullstack-ecomm-backend-app.onrender.com${formatImageUrl(item.product_image)}`} id="pro-img" alt="Image" /></NavLink>
+                                            {/* <NavLink to={`/ProductDetails/${item._id}`}><img src={`https://fullstack-ecomm-backend-app.onrender.com${formatImageUrl(item.product_image)}`} id="pro-img" alt="Image" /></NavLink> */}
+                                            <NavLink to={`/ProductDetails/${item._id}`}><img src={item.product_image} id="pro-img" alt="Image" /></NavLink>
                                             {
                                                 isInWishlist?(
                                                     <div className="filled-heart-icon" onClick={()=>removeFromWishlist(item._id)}>
