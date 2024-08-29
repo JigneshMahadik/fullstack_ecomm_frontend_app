@@ -144,12 +144,16 @@ export function Orders(){
                                                     fetchProductDetails(item.productId);
                                                     const product = productDetails[item.productId];
                                                     // console.log("pro id is",product);
+                                                    // const rel_path = item.product_image.split("/");
+                                                    // const len = item.product_image.split("/").length;
+
                                                     return(
                                                         <div>
                                                             <div class="flex max-lg:flex-col items-center gap-8 lg:gap-24 px-3 md:px-11">
                                                                 <div class="grid grid-cols-4 w-full">
                                                                     <div class="col-span-4 sm:col-span-1">
-                                                                        <img src="https://pagedone.io/asset/uploads/1705474672.png" alt="" class="max-sm:mx-auto"/>
+                                                                        {/* <img src={`https://fullstack-ecomm-backend-app.onrender.com/filesUploaded/${rel_path[len-1]}`} alt="" class="max-sm:mx-auto"/> */}
+                                                                        <img src={item.product_image} alt="" class="max-sm:mx-auto"/>
                                                                     </div>
                                                                     <div
                                                                         class="col-span-4 sm:col-span-3 max-sm:mt-4 sm:pl-8 flex flex-col justify-center max-sm:items-center">
