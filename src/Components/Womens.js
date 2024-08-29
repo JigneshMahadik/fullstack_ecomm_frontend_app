@@ -1,5 +1,4 @@
 import "../css/Deals.css"
-import img1 from "../assets/images/Clothes/1.jpeg"
 import { useEffect, useState } from "react"
 import axios from "axios";
 import { NavLink } from "react-router-dom"
@@ -139,7 +138,7 @@ export function Womens(){
                                     return(
                                         <div id="home-product-card" key={id}>
                                             <div id="part-1">
-                                            <NavLink to={`/ProductDetails/${item._id}`}><img src={img1} id="pro-img" alt="Image" /></NavLink>
+                                            <NavLink to={`/ProductDetails/${item._id}`}><img src={item.product_image} id="pro-img" alt="Image" /></NavLink>
                                             {
                                                 isInWishlist?(
                                                     <div className="filled-heart-icon" onClick={()=>removeFromWishlist(item._id)}>
