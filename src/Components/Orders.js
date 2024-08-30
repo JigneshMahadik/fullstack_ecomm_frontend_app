@@ -29,7 +29,7 @@ export function Orders(){
     async function fetchedOrders(){
         const custid = tokenCheck();
         if(custid !== "null"){
-            const resp = await axios.get(`http://localhost:8082/orders?custid=${custid}`);
+            const resp = await axios.get(`https://fullstack-ecomm-backend-app.onrender.com/orders?custid=${custid}`);
             // console.log("Orders are : ",resp.data.response);
             setOrders(resp.data.response);
         }
@@ -37,7 +37,7 @@ export function Orders(){
 
     async function fetchProductDetails(proid){
         if (!productDetails[proid]) {
-          const resp = await axios.get(`http://localhost:8082/productDetails?proid=${proid}`);
+          const resp = await axios.get(`https://fullstack-ecomm-backend-app.onrender.com/productDetails?proid=${proid}`);
         //   console.log("Product details:", resp.data.data);
           setProductDetails((prevDetails) => ({
             ...prevDetails,
