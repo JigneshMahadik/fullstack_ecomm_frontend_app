@@ -37,7 +37,6 @@ export function Wishlist(){
         const custid = tokenCheck();
         const cart = await axios.post(`https://fullstack-ecomm-backend-app.onrender.com/getWishlistProductListWithDetails?custId=${custid}`);
         // setCartedProducts(cart.data.data.map(item => item.productId));
-        console.log("quantity",cart.data.data)
         setWishlistProducts(cart.data.data);
         // const totalPrice = cart.data.data.reduce((acc, item) => acc + (item.productId.price * item.quantity), 0);
         // setTotal(totalPrice);
@@ -59,7 +58,6 @@ export function Wishlist(){
         if(custid != "null"){
             const cart = await axios.get(`https://fullstack-ecomm-backend-app.onrender.com/getCartedProductList?custId=${custid}`);
             setCartedProducts(cart.data.data.map(item => item.productId));
-            console.log(cart);
         }
     }
 
@@ -106,7 +104,7 @@ export function Wishlist(){
                                 return(
                                     <div key={id} className="rounded-3xl border-2 border-gray-200 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4 ">
                                         <div className="col-span-12 lg:col-span-2 img box">
-                                            <img src={img1} alt="speaker image" className="max-lg:w-full lg:w-[180px] "/>
+                                            <img src={item.productId.product_image} alt="speaker image" className="max-lg:w-full lg:w-[180px] "/>
                                         </div>
                                         <div className="col-span-12 lg:col-span-10 detail w-full lg:pl-3">
                                             <div className="flex items-center justify-between w-full mb-4">
