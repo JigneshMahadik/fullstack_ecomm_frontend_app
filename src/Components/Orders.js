@@ -29,16 +29,16 @@ export function Orders(){
     async function fetchedOrders(){
         const custid = tokenCheck();
         if(custid !== "null"){
-            const resp = await axios.get(`https://fullstack-ecomm-backend-app.onrender.com/orders?custid=${custid}`);
-            console.log("Orders are : ",resp.data.response);
+            const resp = await axios.get(`http://localhost:8082/orders?custid=${custid}`);
+            // console.log("Orders are : ",resp.data.response);
             setOrders(resp.data.response);
         }
     }
 
     async function fetchProductDetails(proid){
         if (!productDetails[proid]) {
-          const resp = await axios.get(`https://fullstack-ecomm-backend-app.onrender.com/productDetails?proid=${proid}`);
-          console.log("Product details:", resp.data.data);
+          const resp = await axios.get(`http://localhost:8082/productDetails?proid=${proid}`);
+        //   console.log("Product details:", resp.data.data);
           setProductDetails((prevDetails) => ({
             ...prevDetails,
             [proid]: resp.data.data,
@@ -105,10 +105,10 @@ export function Orders(){
                     {
                         orders?(
                             orders.map((order,id)=>{
-                                console.log("quan is",id,order);
+                                // console.log("quan is",id,order);
                                 const date = new Date(order.createdAt);
                                 const day = date.getDate();
-                                console.log("day is",day)
+                                // console.log("day is",day)
                                 const month = date.toLocaleString('default', { month: 'long' });
                                 const year = date.getFullYear();
                                 return(
@@ -146,14 +146,24 @@ export function Orders(){
                                                     // console.log("pro id is",product);
                                                     // const rel_path = item.product_image.split("/");
                                                     // const len = item.product_image.split("/").length;
+                                                    // console.log("jack",item);
+                                                    // Check if product data is available
+                                                    if (!product) {
+                                                        // If product data is not available, render a loading state or a placeholder
+                                                        return (
+                                                            <div key={idx}>
+                                                                <p>Loading...</p>
+                                                            </div>
+                                                        );
+                                                    }
 
                                                     return(
-                                                        <div>
+                                                        <div key={idx}>
                                                             <div class="flex max-lg:flex-col items-center gap-8 lg:gap-24 px-3 md:px-11">
                                                                 <div class="grid grid-cols-4 w-full">
                                                                     <div class="col-span-4 sm:col-span-1">
                                                                         {/* <img src={`https://fullstack-ecomm-backend-app.onrender.com/filesUploaded/${rel_path[len-1]}`} alt="" class="max-sm:mx-auto"/> */}
-                                                                        <img src={item.product_image} alt="" class="max-sm:mx-auto"/>
+                                                                        <img src={product.product_image} alt="" class="max-sm:mx-auto"/>
                                                                     </div>
                                                                     <div
                                                                         class="col-span-4 sm:col-span-3 max-sm:mt-4 sm:pl-8 flex flex-col justify-center max-sm:items-center">
