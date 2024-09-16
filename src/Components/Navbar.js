@@ -40,7 +40,7 @@ export function Navbar() {
         <div>
             <nav>
                 <div id="logo">
-                    <h1>Logo</h1>
+                    <h1>CartFlex</h1>
                 </div>
                 <div id="menu">
                     <NavLink to="/"><p>Home</p></NavLink>
